@@ -163,7 +163,7 @@ def login(
         RoleArn=config.role_arn,
         PrincipalArn=principal_arn,
         SAMLAssertion=assertion,
-        DurationSeconds=config.session_duration,
+        DurationSeconds=int(config.session_duration),
     )
 
     if stdout:
